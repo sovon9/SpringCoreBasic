@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+
+<!-- you can easily cxhange from Bus to Car just changing below class, no code changes required in Main.java -->
+<bean id="vehicleBean" class="springCore.SpringCore.ConstructorInjection.Bus">
+	<constructor-arg ref="engineBean" />
+</bean>
+
+<bean id="engineBean" class="springCore.SpringCore.ConstructorInjection.EngineImpl">
+
+</bean>
+
+</beans>
